@@ -9,11 +9,6 @@ st.write(
 # OpenAI API-Key
 openai_api_key = st.text_input("OpenAI API Key", type="password")
 
-if not openai_api_key:
-    st.info("Bitte gib deinen OpenAI API Key ein, um fortzufahren.", icon="🗝️")
-else:
-    client = OpenAI(api_key=openai_api_key)
-
     # Sitzung für Nachrichten
     if "thread_id" not in st.session_state:
         # Erstelle einen neuen Thread (Konversation)
