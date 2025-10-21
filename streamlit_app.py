@@ -1,16 +1,15 @@
+import os
 import streamlit as st
 from openai import OpenAI
 
 st.title("💬 Nein-Sager")
-st.write(
-    "Dieser Chatbot sagt Nein."
-)
+st.write("Dieser Chatbot sagt Nein.")
 
-# OpenAI API-Key
-# openai_api_key = st.text_input("OpenAI API Key", type="password")
+# OpenAI API-Key aus Umgebungsvariable laden
+openai_api_key = os.getenv("OPENAI_API_KEY")
 
 if not openai_api_key:
-    st.info("Bitte gib deinen OpenAI API Key ein, um fortzufahren.", icon="🗝️")
+    st.error("⚠️ Kein OpenAI API Key in der Umgebungsvariable gefunden (`OPENAI_API_KEY`).")
 else:
     client = OpenAI(api_key=openai_api_key)
 
