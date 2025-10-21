@@ -7,7 +7,7 @@ st.write(
 )
 
 # OpenAI API-Key
-openai_api_key = st.text_input("OpenAI API Key", type="password")
+# openai_api_key = st.text_input("OpenAI API Key", type="password")
 
 if not openai_api_key:
     st.info("Bitte gib deinen OpenAI API Key ein, um fortzufahren.", icon="🗝️")
