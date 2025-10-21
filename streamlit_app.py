@@ -1,9 +1,9 @@
 import streamlit as st
 from openai import OpenAI
 
-st.title("💬 Chatbot mit OpenAI Assistant")
+st.title("💬 Nein-Sager")
 st.write(
-    "Dieser Chatbot nutzt einen vordefinierten OpenAI Assistant (ID: asst_6eb9KdjXtWz5D9a1EFn2MCPD)."
+    "Dieser Chatbot sagt Nein."
 )
 
 # OpenAI API-Key
